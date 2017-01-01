@@ -1,5 +1,15 @@
 # unbinding vocab
 
+## Design
+
+- normalized ascii rendering of pali terms as id
+
+## Setup
+
+```
+mkdir .db
+
+```
 
 ## Notes
 
