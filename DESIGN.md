@@ -6,10 +6,19 @@
 
 ## Classes
 
+#### Internal
+
 `upo:unicode` : unicode version of pali term with diacritics
 
 ## Properties
 
+#### External
+
+`rdf:type`
+`rdfs:Resource`
+`owl:NamedIndividual`
+`owl:Class`
+`owl:ObjectProperty`
 
 ---
 

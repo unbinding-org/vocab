@@ -21,17 +21,22 @@ module.exports = {
     }
   },
   effects: {
-    addTerm: function (state, data, send, done) {
-      http.post(`${baseUrl}/terms`, {
+    addStatement: function (state, data, send, done) {
+      http.post(`${baseUrl}/statement`, {
         body: JSON.stringify(data)
       }, (err, res) => {
         console.log(res)
       })
     },
-    listTerms: function (state, data, send, done) {
-      http.get(`${baseUrl}/terms`, (err, res) => {
+    listClasses: function (state, data, send, done) {
+      http.get(`${baseUrl}/class`, (err, res) => {
         send('setTerms', JSON.parse(res.body), done)
       })
+    }
+  },
+  subscriptions: {
+    init: (send, done) => {
+      window.addEventListener('load', () => send('listClasses', done))
     }
   }
 }

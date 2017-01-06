@@ -9,15 +9,6 @@ the ease of publishing a web page."
 
 ## Notes
 
-- RDF
-  - rdf:type
-- RDFS (define the structure of the data)
-  - rdfs:Resource
-- OWL 2
-  - individuals, classes and properties (object, datatype, annotation)
-    - owl:NamedIndividual
-    - owl:Class
-    - owl:ObjectProperty
 
 ## Setup
 

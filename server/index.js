@@ -16,6 +16,16 @@ const server = http.createServer((req, res) => {
   console.log(`${req.method} to ${req.url}`)
 
   switch (req.url) {
+    case '/class':
+      if (req.method === 'GET') {
+        listClasses(res)
+      }
+      break
+    case '/statement':
+      if (req.method === 'POST') {
+        addStatement(req, res)
+      }
+      break
     case '/terms':
       if (req.method === 'GET') {
         listTerms(res)
@@ -33,6 +43,36 @@ const server = http.createServer((req, res) => {
 })
 
 server.listen(1337)
+
+function listClasses (res) {
+  const source = graph.getStream({predicate: 'type', object: 'class'})
+  let results = []
+
+  source.on('data', data => results.push(data))
+  source.on('end', () => {
+    console.log(results)
+    res.write(JSON.stringify(results))
+    res.end()
+  })
+}
+
+function addStatement (req, res) {
+  let body = ''
+
+  req.on('data', chunk => {
+    const str = chunk.toString('utf8')
+    body += str
+  })
+
+  req.on('end', () => {
+    console.log(body)
+    body = JSON.parse(body)
+    graph.put(body, err => {
+      res.end()
+    })
+  })
+
+}
 
 function listTerms (res) {
   const source = dict.createKeyStream()
