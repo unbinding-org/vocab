@@ -4,7 +4,7 @@
 
 this project is a collection of software & documentation that supports the building of vocabularies of useful ideas, concepts and categories from the pali canon & theravadin buddhist teachers.
 
-the goal: to abstract concepts out of opinions so a person in training can, at a glance, understand the nuances between their different interpretations.
+the goal: to abstract concepts out of opinions so a person in training can, at a glance, understand the nuances between the different existing interpretations.
 
 the project currently includes the following sub-projects:
 - a web server that publishes ontologies & vocabularies
@@ -25,5 +25,5 @@ mkdir .db   # make sure you have a .db folder
 
 - [levelgraph](http://nodejsconfit.levelgraph.io/)
 - [hexastores](http://people.csail.mit.edu/tdanford/6830papers/weiss-hexastore.pdf)
-- [owl2 primer](https://www.w3.org/TR/2012/REC-owl2-primer-20121211/)
+- [RDFJS Interface spec](https://github.com/rdfjs/representation-task-force/blob/master/interface-spec.md)
 
