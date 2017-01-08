@@ -3,26 +3,17 @@
 - base url: `http://vocab.unbinding.org/upo`
 - namespace: upo (Unbinding.org Pali Ontology)
 
+## Serialization formats
 
-## Classes
+- Always output RDF/XML
+- Use JSON-LD internally
+- Embed data using RDFa in HTML documents
 
-#### Internal
+## Pali Transliteration
 
-`upo:unicode` : unicode version of pali term with diacritics
+a variation on the [Velthuis scheme][Velthuis] is used to render pali terms in ascii for use as index term (id)
 
-## Properties
-
-#### External
-
-`rdf:type`
-`rdfs:Resource`
-`owl:NamedIndividual`
-`owl:Class`
-`owl:ObjectProperty`
-
----
-
-- normalized ascii rendering of pali terms as index terms using a variation on the [Velthuis scheme][Velthuis]
+ie: `http://vocab.unbinding.org/upo/terms#vi~n~naa.na`
 
 |     |      |
 | --- | ---- |
@@ -37,7 +28,6 @@
 |  ṅ  |  'n  |
 |  ḷ  |  .l  |
 
-ie: `http://vocab.unbinding.org/upo#vi~n~naa.na`
 
 ---
 
